@@ -7,7 +7,7 @@ import (
     "net/http"
 )
 
-var addr = flag.String("addr", ":1718", "http service address") // Q=17, R=18
+var addr = flag.String("addr", ":8080", "http service address") // Q=80, R=80
 
 var templ = template.Must(template.New("qr").Parse(templateStr))
 
