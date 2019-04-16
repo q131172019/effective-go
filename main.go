@@ -13,7 +13,7 @@ var templ = template.Must(template.New("qr").Parse(templateStr))
 
 func main() {
     flag.Parse()
-    http.Handle("/", HandlerFunc(QR))
+    http.HandlerFunc("/", QR)
     err := http.ListenAndServe(*addr, nil)
     if err != nil {
         log.Fatal("ListenAndServe:", err)
